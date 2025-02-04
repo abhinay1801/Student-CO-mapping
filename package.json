@@ -3,7 +3,7 @@
   "version": "1.0.0",
   "main": "index.js",
   "scripts": {
-    "start": "concurrently \"npm run dev --prefix student_co_mapping\" \"npx nodemon mbackend/server.js\""
+    "start": "concurrently \"npm run dev --prefix frontend\" \"npx nodemon backend/server.js\""
   },
   "author": "",
   "license": "ISC",
