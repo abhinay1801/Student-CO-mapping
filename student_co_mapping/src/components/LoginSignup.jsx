@@ -29,7 +29,7 @@ const LoginSignup = () => {
         if (isSignup && response.data.isFirstTime) {
           navigate("/setentry");
         } else {
-          navigate("/home");
+          navigate("/detailsentry");
         }
       }
     } catch (error) {

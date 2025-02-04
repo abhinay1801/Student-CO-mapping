@@ -1,7 +1,7 @@
 import React, { useState } from "react";
 import { useNavigate } from "react-router-dom";
 
-function Home() {
+function DetailsEntry() {
   const [selectBranch, setSelectBranch] = useState("Select Branch");
   const [selectYear, setSelectYear] = useState("Select Year");
   const [selectSection, setSelectSection] = useState("Select Section");
@@ -42,24 +42,12 @@ function Home() {
   };
 
   const handleSubmit = () => {
-    console.log('academicYear:', academicYear);
-    console.log('selectBranch:', selectBranch);
-    console.log('selectSection:', selectSection);
-    console.log('examMonth:', examMonth);
-    console.log('semester:', semester);
-    console.log('selectYear:', selectYear);
-    console.log('labName:', labName);
-    console.log('externalExaminer:', externalExaminer);
-    console.log('internalExaminer:', internalExaminer);
-    console.log('examDate:', examDate);
-    console.log('maxMarks:', maxMarks);
-    console.log('regulation:', regulation);
   
     if (
       academicYear && selectBranch !== "Select Branch" && selectSection !== "Select Section" && examMonth && semester !== "Select Semester" &&
       selectYear !== "Select Year" && labName && externalExaminer && internalExaminer && examDate && maxMarks && regulation
     ) {
-      navigate("/name", { 
+      navigate("/tableentry", { 
         state: { 
           academicYear, 
           Branch: selectBranch, 
@@ -251,4 +239,4 @@ function Home() {
   );
 }
 
-export default Home;
+export default DetailsEntry;

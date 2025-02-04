@@ -45,7 +45,7 @@ const SetEntry = () => {
 
       if (response.ok) {
         alert("Sets stored successfully!");
-        navigate("/home");
+        navigate("/detailsentry");
       } else {
         alert("Error storing sets");
       }
