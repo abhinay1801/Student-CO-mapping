@@ -14,11 +14,11 @@ const App = () => {
         <Route path="/" element={<LoginSignup />} />
         <Route
           path="/setentry"
-          element={isAuthenticated ? <SetEntry /> : <Navigate to="/" />}
+          element={<SetEntry />}
         />
         <Route
           path="/detailsentry"
-          element={isAuthenticated ? <DetailsEntry /> : <Navigate to="/" />}
+         element={<DetailsEntry />}
         />
         <Route path="/tableentry" element={<TableEntry />} />
       </Routes>

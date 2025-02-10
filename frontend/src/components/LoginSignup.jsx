@@ -26,11 +26,11 @@ const LoginSignup = () => {
       if (response.data.token) {
         localStorage.setItem("token", response.data.token);
 
-        if (isSignup && response.data.isFirstTime) {
+        // if (isSignup && response.data.isFirstTime) {
           navigate("/setentry");
-        } else {
-          navigate("/detailsentry");
-        }
+        // } else {
+        //   navigate("/detailsentry");
+        // }
       }
     } catch (error) {
       if (error.response?.status === 401) {

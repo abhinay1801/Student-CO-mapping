@@ -1,7 +1,11 @@
 import React, { useState } from "react";
-import { useNavigate } from "react-router-dom";
+import { useLocation, useNavigate } from "react-router-dom";
 
 function DetailsEntry() {
+  const location = useLocation();
+  const {
+    subject=""
+  } = location.state || {};
   const [selectBranch, setSelectBranch] = useState("Select Branch");
   const [selectYear, setSelectYear] = useState("Select Year");
   const [selectSection, setSelectSection] = useState("Select Section");
@@ -60,7 +64,8 @@ function DetailsEntry() {
           InternalExaminer: internalExaminer,
           ExamDate: examDate,
           MaxMarks: maxMarks,
-          Regulation: regulation
+          Regulation: regulation,
+          subject:subject
         } 
       });
     } else {
